@@ -3,6 +3,10 @@
 <h1>Home</h1>
 <p><%= homeStartingContent %></p>
 
+<form action="/compose" method="get">
+    <button class="btn btn-outline-primary my-3" type="submit">Create New Post</button>
+</form>
+
 <% posts.forEach((post) => { %>
 <h1><%= post.title %></h1>
 <p><%= post.body.slice(0, 50) + '...' %><a href="/post/<%=post.title%>">Read More</a></p>
